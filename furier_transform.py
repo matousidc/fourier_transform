@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
 import cmath
 
-fp = os.path.join('./lds/01_S_01_vzduch.lvm')
-with open(fp, 'r') as file:
+with open('01_S_01_vzduch.lvm', 'r') as file:
     data = file.readlines()
 
 for num, i in enumerate(data):
