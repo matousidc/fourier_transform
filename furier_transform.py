@@ -25,7 +25,6 @@ else:
 df = pd.read_csv(StringIO(data), sep="\t", names=headers, engine='python')
 print(df)
 n = 200000
-# freq = 30000
 freq = n/df['time'].iloc[len(df)-1]
 xf = rfftfreq(n, 1/freq)
 yf1 = rfft(np.array(df['sensor1']))
@@ -50,5 +49,5 @@ ax.plot(xf[peaks], properties['peak_heights'], 'x')  # mark peaks in graph
 ax.set(xlim=(10, 1000))
 ax.set_xlabel('frequency [Hz]')
 ax.set_ylabel('amplitude [Hz]')
-# plt.show()
+plt.show()
 
